@@ -321,6 +321,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="W5n-ZK-7Rz" id="fDt-44-h1j"/>
                         <outlet property="longTermButton" destination="14h-br-cIN" id="ceT-Kg-6Vz"/>
+                        <outlet property="nextButton" destination="2IG-1P-2zy" id="45c-ie-Hbs"/>
                         <outlet property="shortTermButton" destination="Sx0-iZ-C0g" id="X45-YG-HDg"/>
                     </connections>
                 </viewController>
