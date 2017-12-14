@@ -13,11 +13,16 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var goalDescriptionLabel : UILabel!
     @IBOutlet weak var goalTypeLabel : UILabel!
     @IBOutlet weak var goalProgressLabel : UILabel!
-
-    func configure (description: String, type: GoalType, progress: Int) {
-        goalDescriptionLabel.text = description
-        goalTypeLabel.text = type.rawValue
-        goalProgressLabel.text = String(describing: progress)
+    
+    @IBOutlet weak var goalCompletedLabel: UIView!
+    var completedView : UIView?
+    
+    func configure (goal: Goal) {
+        goalDescriptionLabel.text = goal.goalDescription
+        goalTypeLabel.text = goal.goalType
+        goalProgressLabel.text = String(describing: goal.goalProgress)
+        
+        goalCompletedLabel.isHidden = goal.goalProgress < goal.goalCompletionValue
     }
     
     override func awakeFromNib() {
